@@ -34,6 +34,11 @@
 * Snapchat
 * Spotify
 * Shazam
+* Yelp
+
+# In Germany
+* [dataArtisans](https://data-artisans.com/)
+
 
 # Amsterdam
 * Booking
