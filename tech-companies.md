@@ -22,6 +22,7 @@
 
 # UK
 * Babylonhealth
+* Sky
 
 # In UK
 * Google
@@ -32,6 +33,7 @@
 * Apple
 * Snapchat
 * Spotify
+* Shazam
 
 # Amsterdam
 * Booking
