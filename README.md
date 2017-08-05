@@ -1,2 +1,2 @@
 # tech-resources
-Links to useful tech-resources
+Sharing ideas, useful technical resources.
