@@ -19,3 +19,25 @@
 * Linghtbend (Scala and Akka)
 * Apple
 * Redhat
+
+# UK
+* Babylonhealth
+
+# In UK
+* Google
+* Amazon
+* Facebook
+* Uber
+* Twitter
+* Apple
+* Snapchat
+* Spotify
+
+# Amsterdam
+* Booking
+
+# Oslo
+* Tapad
+
+# Stockholm
+* Spotify
