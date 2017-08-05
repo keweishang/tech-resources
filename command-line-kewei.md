@@ -52,8 +52,8 @@ https://github.com/robbyrussell/oh-my-zsh
 | ------------- |-------------------|
 | Ctrl + A | Move to the beginning of the line |
 | Ctrl + E | Move to the end of the line |
-| Ctrl + left | Move one word backward |
-| Ctrl + right | Move one word forward |
+| Opt + left | Move one word backward |
+| Opt + right | Move one word forward |
 | Ctrl + U | Clear the entire line |
 | Ctrl + K | Clear the characters on the line after the current cursor position |
 | Ctrl + W | Delete the word in front of the cursor |
