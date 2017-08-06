@@ -13,7 +13,12 @@ https://github.com/robbyrussell/oh-my-zsh
 # Network
 | Command      | Description           |
 | ------------- |-------------------|
-| lsof -i :80 | View what is using up your current port |
+| lsof -i :80 | Show what is using up your current port |
+
+# Performance
+| Command      | Description           |
+| ------------- |-------------------|
+| time http www.lemonde.fr | Show the duration of a command |
 
 # iTerm2
 | Shortkey      | Description           |
