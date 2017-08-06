@@ -23,11 +23,16 @@ https://github.com/robbyrussell/oh-my-zsh
 # iTerm2
 | Shortkey      | Description           |
 | ------------- |-------------------|
-| CMD + D | Split screen |
+| CMD + D | Split screen vertically |
+| CMD + Shift + D | Split screen horizontally |
 | CMD + ; | Auto-complete menu |
 | CMD + Shift + H | Show paste history |
 | CMD + / | Find the cursor |
 | CMD + OPT + E | Search all tabs ( aka Expose tabs ) |
+| CMD + 1 | Switch to tab 1 |
+| CMD + Enter | Toggle/Untoggle full screen mode |
+| CMD + T | New tab |
+| CMD + W | Close the current tab |
 
 # oh-my-zsh (Git)
 | Shortkey      | Command           | Comment           |
