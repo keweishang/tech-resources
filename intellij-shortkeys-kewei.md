@@ -40,6 +40,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | opt + ↑ | Incremental expression selection |
 | ctrl + space | code completion |
 | cmd + opt + l | format code |
+| cmd + shift + u | toggle between lowercase and uppercase |
 
 # Refactoring
 | Shortcut      | Comment           |
