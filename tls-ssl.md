@@ -35,3 +35,28 @@ The existing key and the certificate would be there in your server.pem file. The
 This command will generate the KeyStore with name keystore.pkcs12, you can use the KeyStore for configuring you server.
 
 # Use JDK's keytool to generate an auto-signed certificate
+`keytool -genkey -keyalg RSA -alias tomcat -keystore selfsigned.jks -validity <days> -keysize 2048`
+- Enter a password for the keystore
+- When prompted for a first name and the last name, enter the domain name of the server. For example, myserver or myserver.mycompany.com
+- When prompted with "Enter key" password for <tomcat>, press Enter to use the same password as the keystore password
+- Run this command to verify the contents of the keystore. `keytool -list -v -keystore selfsigned.jks`
+- When prompted, enter the keystore password.
+
+# Use OpenSSL to check certificate information
+
+## Check a certificate in pem format
+`openssl x509 -in server.pem -text`
+
+## Check a certificate in crt format
+`openssl x509 -in server.crt -text`
+
+## Check a certificate in pkcs12 format (.pfx or .p12 or .pkcs12)
+`openssl pkcs12 -info -in keyStore.p12`
+
+# Use Java's keytool to check certificate information
+
+## Check a certificate in pem format
+`keytool -printcert -file server.pem`
+
+## Check a certificate (in a keystore) in jks format
+`keytool -list -v -keystore selfsigned.jks` (When prompted, enter the keystore password)
