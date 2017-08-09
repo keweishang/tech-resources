@@ -1,3 +1,14 @@
+- [Use OpenSSL to generate an auto-signed certificate](#use-openssl-to-generate-an-auto-signed-certificate)
+    - [Transform certificate to pem and pkcs12 format (optional)](#transform-certificate-to-pem-and-pkcs12-format-optional)
+- [Use JDK's keytool to generate an auto-signed certificate](#use-jdks-keytool-to-generate-an-auto-signed-certificate)
+- [Use OpenSSL to check certificate information](#use-openssl-to-check-certificate-information)
+    - [Check a certificate in pem format](#check-a-certificate-in-pem-format)
+    - [Check a certificate in crt format](#check-a-certificate-in-crt-format)
+    - [Check a certificate in pkcs12 format (.pfx or .p12 or .pkcs12)](#check-a-certificate-in-pkcs12-format-pfx-or-p12-or-pkcs12)
+- [Use Java's keytool to check certificate information](#use-javas-keytool-to-check-certificate-information)
+    - [Check a certificate in pem format](#check-a-certificate-in-pem-format)
+    - [Check a certificate (in a keystore) in jks format](#check-a-certificate-in-a-keystore-in-jks-format)
+
 # Use OpenSSL to generate an auto-signed certificate
 
 1. `openssl genrsa -des3 -out server.key 2048`
