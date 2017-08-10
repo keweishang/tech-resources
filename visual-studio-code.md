@@ -9,12 +9,13 @@
 | CMD + Shift + P, then toc (choose create table of content) | Create table of content    |
 | Opt + Shift + F                                            | Format document            |
 
-
 # General shortkeys
 | Shortkey        | Description     |
 | --------------- | --------------- |
 | CMD + Shift + P | Command Palette |
 | CMD + Shift + V | Preview md      |
+| Ctrl + `        | Open Terminal   |
+
 
 # Editing shortkeys
 | Shortkey            | Description                 |
