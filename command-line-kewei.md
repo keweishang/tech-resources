@@ -19,6 +19,8 @@ https://github.com/robbyrussell/oh-my-zsh
 | Command      | Description           |
 | ------------- |-------------------|
 | time http www.lemonde.fr | Show the duration of a command |
+| top -F -R -o cpu | Show top CPU usages (sorted) |
+
 
 # iTerm2
 | Shortkey      | Description           |
