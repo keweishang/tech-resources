@@ -36,8 +36,11 @@ The most useful IntelliJ shortcuts that I use everyday
 | opt + shift + up/down | move up/down line |
 | cmd + shift + up/down | move up/down while statement (function) |
 | cmd + del | delete line |
-| cmd + opt + / | comment the block |
+| cmd + d | duplicate the current line |
+| cmd + / | comment the selection in multi-lines style |
+| cmd + opt + / | comment the selection in block style |
 | opt + ↑ | Incremental expression selection |
+| opt + del | delete a word |
 | ctrl + space | code completion |
 | cmd + opt + l | format code |
 
