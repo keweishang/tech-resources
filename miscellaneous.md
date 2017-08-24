@@ -7,3 +7,6 @@ Find unread mails in primary category:
 
 # Markdown editing
 [Visual Studio Code](https://code.visualstudio.com)
+
+# Git GUI
+[Gitkraken](https://www.gitkraken.com)
