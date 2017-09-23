@@ -10,6 +10,14 @@ https://github.com/robbyrussell/oh-my-zsh
 | pbcopy < text.txt | Copy the file contents to your clipboard |
 | touch file1 file2 | Create multiple empty files              |
 
+- `grep -rnw '/path/to/somewhere/' -e 'pattern'`
+Search files containing pattern. 
+`-r` is recursive; `-n` is line number; `-w` stands for match the whole word; `-l` (lower-case L) can be added to just give the file name of matching files.
+
+- `find /home/username/ -name "*.err"`
+Search for *.err files in the /home/username/ directory and all sub-directories.
+
+
 # Network
 | Command     | Description                             |
 | ----------- | --------------------------------------- |
@@ -19,7 +27,7 @@ https://github.com/robbyrussell/oh-my-zsh
 | Command                  | Description                    |
 | ------------------------ | ------------------------------ |
 | time http www.lemonde.fr | Show the duration of a command |
-| top -F -R -o cpu | Show top CPU usages (sorted) |
+| top -F -R -o cpu         | Show top CPU usages (sorted)   |
 
 
 # iTerm2
