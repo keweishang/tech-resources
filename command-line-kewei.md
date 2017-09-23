@@ -5,29 +5,43 @@ Most useful Linux commands, iTerm2, oh-my-zsh shortkey that I use everyday.
 https://github.com/robbyrussell/oh-my-zsh
 
 # File
-| Command           | Description                              |
-| ----------------- | ---------------------------------------- |
-| pbcopy < text.txt | Copy the file contents to your clipboard |
-| touch file1 file2 | Create multiple empty files              |
-
 - `grep -rnw '/path/to/somewhere/' -e 'pattern'`
-Search files containing pattern. 
-`-r` is recursive; `-n` is line number; `-w` stands for match the whole word; `-l` (lower-case L) can be added to just give the file name of matching files.
+
+Search files containing pattern. `-r` is recursive; `-n` is line number; `-w` stands for match the whole word; `-l` (lower-case L) can be added to just give the file name of matching files.
 
 - `find /home/username/ -name "*.err"`
+
 Search for *.err files in the /home/username/ directory and all sub-directories.
 
+- `pbcopy < text.txt`
+
+Copy the file contents to your clipboard.
+
+- `touch file1 file2`
+
+Create multiple empty files.
 
 # Network
-| Command     | Description                             |
-| ----------- | --------------------------------------- |
-| lsof -i :80 | Show what is using up your current port |
+- `lsof -i :80`
+
+Show what is using up your current port
+
+- `iftop` or `iftop -i eth0` (on any specific network interface)
+
+Shows the data transfer rate, both for data sent and received, for the past 2 seconds, 10 seconds, and 40 seconds.
 
 # Performance
-| Command                  | Description                    |
-| ------------------------ | ------------------------------ |
-| time http www.lemonde.fr | Show the duration of a command |
-| top -F -R -o cpu         | Show top CPU usages (sorted)   |
+- `time http www.lemonde.fr`
+
+Show the duration of a command.
+
+- `top -F -R -o cpu`
+
+Show top CPU usages (sorted).
+
+- `htop`
+
+More colorful. Show each CPU core and processes' params.
 
 
 # iTerm2
