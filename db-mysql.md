@@ -48,6 +48,41 @@ mysql>
     mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPass';
     ```
 
+## Creating and Using Database
+
+See <https://dev.mysql.com/doc/refman/5.7/en/database-use.html>.
+
+Create a new database `sonarqube`:
+
+```
+mysql> CREATE DATABASE sonarqube;
+```
+
+Use database `sonarqube`:
+
+```
+mysql> USE sonarqube
+```
+
+## User Account Management
+
+See <https://dev.mysql.com/doc/refman/5.7/en/user-account-management.html>.
+
+Create a user `sonarqube`. Grant it to database `sonarqube` with all privileges:
+
+```
+mysql> CREATE USER 'sonarqube'@'localhost' IDENTIFIED BY 'password';
+mysql> GRANT ALL PRIVILEGES ON sonarqube.* TO 'sonarqube'@'localhost';
+mysql> SHOW GRANTS FOR 'sonarqube'@'localhost';
++------------------------------------------------------------------+
+| Grants for sonarqube@localhost                                   |
++------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'sonarqube'@'localhost'                    |
+| GRANT ALL PRIVILEGES ON `sonarqube`.* TO 'sonarqube'@'localhost' |
++------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+```
+
 ## Reference
 
 - <sup>[1]</sup> [Stack Overflow: Can't access mysql from command line mac][so1]
