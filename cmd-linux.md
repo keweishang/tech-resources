@@ -8,9 +8,22 @@ OS.
 
 ### grep
 
-    grep -rnw '/path/to/somewhere/' -e 'pattern'
+```sh
+grep 'key' Hi.java    # Lines containing 'key'
+grep -n 'key' Hi.java # Lines containing 'key' and show line
 
-Search files containing pattern. `-r` is recursive; `-n` is line number; `-w` stands for match the whole word; `-l` (lower-case L) can be added to just give the file name of matching files.
+# Recursively search files in the current directory `.` and its sub-directories
+# containing the whole word 'key', and display the row number along side with
+# the file name, where:
+#   -r: recursive search
+#   -n: line number
+#   -w: match the whole word
+grep -rnw '.' -e 'key'
+grep --exclude-dir={.git,target} -rnw '.' -e 'key' # Show filename & line
+grep --exclude-dir={.git,target} -rl '.' -e 'key'  # Show filename only (-l)
+grep --include=\*.{c,h} -rnw '.' -e 'pattern'      # Search *.c and *.h
+grep -i 'case.insensitive'                         # Case insensitive
+```
 
 ### find
 
