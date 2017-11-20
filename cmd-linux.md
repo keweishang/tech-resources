@@ -1,21 +1,40 @@
-# File
-- `grep -rnw '/path/to/somewhere/' -e 'pattern'`
+# Linux Useful Commands
+
+Here's a collection of Linux useful commands. Without specific notice, these
+examples are [POSIX](https://en.wikipedia.org/wiki/POSIX), thus portable to Mac
+OS.
+
+## File
+
+### grep
+
+    grep -rnw '/path/to/somewhere/' -e 'pattern'
 
 Search files containing pattern. `-r` is recursive; `-n` is line number; `-w` stands for match the whole word; `-l` (lower-case L) can be added to just give the file name of matching files.
 
-- `find /home/username/ -name "*.err"`
+### find
+
+    find /home/username/ -name "*.err"
 
 Search for *.err files in the /home/username/ directory and all sub-directories.
 
-- `pbcopy < text.txt`
+### pycopy
+
+```sh
+pbcopy < text.txt
+```
 
 Copy the file contents to your clipboard.
 
-- `touch file1 file2`
+### touch
+
+```sh
+touch file1 file2
+```
 
 Create multiple empty files.
 
-# Network
+## Network
 - `lsof -i :80`
 
 Show what is using up your current port
@@ -24,7 +43,7 @@ Show what is using up your current port
 
 Shows the data transfer rate, both for data sent and received, for the past 2 seconds, 10 seconds, and 40 seconds.
 
-# Performance
+## Performance
 - `time http www.lemonde.fr`
 
 Show the duration of a command.
