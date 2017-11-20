@@ -27,9 +27,17 @@ grep -i 'case.insensitive'                         # Case insensitive
 
 ### find
 
-    find /home/username/ -name "*.err"
-
-Search for *.err files in the /home/username/ directory and all sub-directories.
+```sh
+find . -name '*.java'                       # Find *.java in curr dir and sub-dirs
+find . -name '*.java' | xargs grep 'key'    # Find *.java containing 'key'
+find . -name '*SNAPSHOT.jar' -exec rm {} +  # Remove all the SNAPSHOTs
+find . -name '*.sh' -exec chmod +x {} \;    # *.sh are now executable
+find ./{a,b} -name 'Test*.java'             # Find Test*.java in dir a, b 
+# Find JARs in */target
+find . -type d -name target -exec find {} -depth 1 -name '*.jar' ;
+# Find how many direct files start with 2017 in module A and B
+find /project/module{A,B} -maxdepth 1 -name '2017*' -type f | wc -l
+```
 
 ### pycopy
 
