@@ -13,3 +13,6 @@ Find unread mails in primary category:
 
 # ab - Apache HTTP server benchmarking tool
 To install: brew install homebrew/apache/ab
+
+# fzf - A command-line fuzzy finder
+To install: brew install fzf
