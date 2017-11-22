@@ -59,6 +59,10 @@ https://github.com/robbyrussell/oh-my-zsh
 | ls -l \*(py\|scala) | list all files whose suffix is py or scala      |
 | kill java[tab]      | Choose and kill process related to java         |
 
+# fzf
+| Command     | Description                                       |
+| ----------- | ------------------------------------------------- |
+| Ctrl + R    | Fuzzy search command line history                 |
 
 # Footnotes
 <a name="myfootnote1">1</a>: If you do `git reset --hard <SOME-COMMIT>` then Git will:
