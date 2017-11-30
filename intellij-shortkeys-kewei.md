@@ -23,7 +23,9 @@ The most useful IntelliJ shortcuts that I use everyday
 | cmd + shift + f12    | maximise editor window                                |
 | opt + f12            | open terminal                                         |
 | f2                   | next problem                                          |
-| cmd + shift + [ or ] | next or previous editor tab                           |
+| cmd + shift + [ or ] | go to left / right editor tab                         |
+| cmd + [ or ]         | undo / redo last navigation operation                 |
+
 
 # Search and Replace
 | Shortcut        | Comment                 |
