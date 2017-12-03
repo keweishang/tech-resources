@@ -28,5 +28,5 @@ git config --global alias.lg 'log --oneline'
 
 # Using GPG Key
 git config --global alias.last 'log --show-signature -1 HEAD'
-git config --global alias.lg 'log --format="%C(yellow)%h %C(green bold)%G?%Creset %s%C(red bold)%d%Creset"'
+git config --global alias.lg 'log --format="%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,reset)%s%C(auto,red bold)% gD% D"'
 ```
