@@ -1,4 +1,7 @@
-# French
+# Tech Companies
+
+## France
+
 * Criteo
 * Datadog
 * Blablacar
@@ -11,8 +14,6 @@
 * Dataiku (Data Science)
 * Clustree (Data Science)
 * Deezer
-
-# In France
 * Google
 * Amazon
 * Microsoft
@@ -20,11 +21,10 @@
 * Apple
 * Redhat
 
-# UK
+## UK
+
 * Babylonhealth
 * Sky
-
-# In UK
 * Google
 * Amazon
 * Facebook
@@ -36,15 +36,17 @@
 * Shazam
 * Yelp
 
-# In Germany
+## Germany
 * [dataArtisans](https://data-artisans.com/)
 
+## Amsterdam
 
-# Amsterdam
 * Booking
 
-# Oslo
+## Oslo
+
 * Tapad
 
-# Stockholm
+## Stockholm
+
 * Spotify
