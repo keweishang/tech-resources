@@ -20,6 +20,9 @@
 * Linghtbend (Scala and Akka)
 * Apple
 * Redhat
+* [Pivotal](https://pivotal.io/careers)
+* [Docker](https://www.docker.com/careers)
+* [SonarSource](https://www.sonarsource.com/company/jobs/)
 
 ## UK
 
