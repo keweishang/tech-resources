@@ -62,6 +62,12 @@ The most useful IntelliJ shortcuts that I use everyday
 | ctrl + shift r/d | run / debug context configuration from editor |
 | ctrl + r/d       | run / debug                                   |
 
+# Debug
+| Shortcut         | Comment                                       |
+| ---------------- | --------------------------------------------- |
+| cmd + opt + f8   | Evaluating expressions in the editor          |
+| opt + f8         | Evaluating arbitrary expressions              |
+
 # General
 | Shortcut        | Comment             |
 | --------------- | ------------------- |
