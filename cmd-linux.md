@@ -55,6 +55,21 @@ touch file1 file2
 
 Create multiple empty files.
 
+### watch
+
+    watch [option(s)] command
+
+`watch` is used to run any designated command at regular intervals. It displays
+its output on a console. This makes it easy to observe the changing output of a
+command over time.
+
+For example:
+
+    watch ls -l
+
+will run `ls -l` every 2 seconds (by default) and display the result on
+terminal. Useful for monitoring file changes during application debug.
+
 ## Network
 - `lsof -i :80`
 
@@ -63,6 +78,11 @@ Show what is using up your current port
 - Network I/O: `iftop` or `iftop -i eth0` (on any specific network interface)
 
 Shows the data transfer rate, both for data sent and received, for the past 2 seconds, 10 seconds, and 40 seconds.
+
+    nslookup <url>
+
+Query the Domain Name System (DNS) to obtain domain name or IP address mapping
+or for any other specific DNS record.
 
 ## Performance
 - `time http www.lemonde.fr`
