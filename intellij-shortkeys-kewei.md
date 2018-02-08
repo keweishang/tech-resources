@@ -25,6 +25,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | f2                   | next problem                                          |
 | cmd + shift + [ or ] | go to left / right editor tab                         |
 | cmd + [ or ]         | undo / redo last navigation operation                 |
+| fn + up or down arrow| page up / down                                        |
 
 
 # Search and Replace
