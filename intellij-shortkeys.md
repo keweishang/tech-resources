@@ -26,7 +26,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | cmd + shift + [ or ] | go to left / right editor tab                         |
 | cmd + [ or ]         | undo / redo last navigation operation                 |
 | fn + up or down arrow| page up / down                                        |
-
+| cmd + opt + [ or ]   | move caret to code block start/end, a.k.a { and }     |
 
 # Search and Replace
 | Shortcut        | Comment                 |
@@ -48,7 +48,9 @@ The most useful IntelliJ shortcuts that I use everyday
 | ctrl + space          | code completion                                   |
 | cmd + opt + l         | format code                                       |
 | cmd + shift + u       | toggle between lowercase and uppercase            |
-| cmd + opt + [ or ]    | move caret to code block start/end, a.k.a { and } |
+| cmd + p               | show constructor/method parameter                 |
+| cmd + opt + t         | surround statement by if/else, try/catch, etc     |
+
 
 # Refactoring
 | Shortcut        | Comment  |
