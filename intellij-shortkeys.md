@@ -50,7 +50,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | cmd + shift + u       | toggle between lowercase and uppercase            |
 | cmd + p               | show constructor/method parameter                 |
 | cmd + opt + t         | surround statement by if/else, try/catch, etc     |
-
+| ctrl + space(twice)   | import static member                              |
 
 # Refactoring
 | Shortcut        | Comment  |
