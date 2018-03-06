@@ -1,10 +1,9 @@
-
 - [Performance profiling](#performance-profiling)
-    - [Java Mission Control and Flight Recorder Demo Series : link](#java-mission-control-and-flight-recorder-demo-series-link)
-    - [JOverflow : link](#joverflow-link)
-    - [jps](#jps)
-        - [Synopsis](#synopsis)
-        - [Examples](#examples)
+  - [Java Mission Control and Flight Recorder Demo Series : link](#java-mission-control-and-flight-recorder-demo-series-link)
+  - [JOverflow : link](#joverflow-link)
+- [jps](#jps)
+  - [Synopsis](#synopsis)
+  - [Examples](#examples)
 - [References](#references)
 
 # Performance profiling
@@ -19,15 +18,15 @@ A very practical tool that Kewei has used to profile CPU and Memory usage:
 
 Trace heap memory wasted by anti-patteern usage such as sparse array, duplicate string, etc.
 
-## jps
+# jps
 
 `jps` - Java Virtual Machine Process Status Tool.
 
-### Synopsis
+## Synopsis
 
     jps [ options ] [ hostid ]
 
-### Examples
+## Examples
 
 Before talking to examples, let's create a small Java program:
 
