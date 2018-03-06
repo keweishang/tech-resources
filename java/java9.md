@@ -1,24 +1,17 @@
-# Java
+- [Java 9 Update](#java-9-update)
+    - [Install Java 9](#install-java-9)
+    - [Update IDE](#update-ide)
+    - [Update Maven Project](#update-maven-project)
+        - [Maven Compiler Plugin](#maven-compiler-plugin)
+        - [Maven Dependency Plugin](#maven-dependency-plugin)
+    - [Update Travis CI](#update-travis-ci)
+    - [Fix Dependency Issues](#fix-dependency-issues)
 
-Resources related to Java.
-
-## Performance profiling
-
-### Java Mission Control and Flight Recorder Demo Series : [link](https://www.youtube.com/playlist?list=PLKCk3OyNwIzsEVDq6zErLW7HSkY7aqdeT)
-
-A very practical tool that Kewei has used to profile CPU and Memory usage:
-* Find most CPU intensive parts of the application and reduce the time complexity of the algorithm
-* Find the most memory intensive parts and reduce the space complexity of the algorithm
-
-#### JOverflow : [link](http://bit.ly/2f6eFLN)
-
-Trace heap memory wasted by anti-patteern usage such as sparse array, duplicate string, etc.
-
-## Java 9 Update
+# Java 9 Update
 
 This section describes how to update an existing Maven project to Java 9.
 
-### Install Java 9
+## Install Java 9
 
 - Download JDK 9 from [Java SE Development Kit 9 Downloads][jdk9-download]
 - Install JDK 9
@@ -34,7 +27,7 @@ This section describes how to update an existing Maven project to Java 9.
       $ javac -version
       javac 9.0.4
 
-### Update IDE
+## Update IDE
 
 Ensure that your IDE is using the correct JDK. If you're using IntelliJ IDEA,
 you should change the Project SDK:
@@ -46,9 +39,9 @@ you should change the Project SDK:
 
 Now we're done.
 
-### Update Maven Project
+## Update Maven Project
 
-#### Maven Compiler Plugin
+### Maven Compiler Plugin
 
 In pom.xml file, change the source and target value from **1.8** to **9** for
 Maven compiler plugin:
@@ -60,7 +53,7 @@ Maven compiler plugin:
 </properties>
 ```
 
-#### Maven Dependency Plugin
+### Maven Dependency Plugin
 
 Maven dependency plugin does not support Java 9 bytecode analysis yet, due to:
 [MDEP-559 Java 9 bytecode cannot be parsed][MDEP-559]. The issue is fixed in
@@ -72,7 +65,7 @@ completely:
 <mdep.analyze.skip>true</mdep.analyze.skip>
 ```
 
-### Update Travis CI
+## Update Travis CI
 
 Change the JDK version in Travis CI configuration file `.travis.yml` to use the
 JDK 9:
@@ -82,7 +75,7 @@ jdk:
   - oraclejdk9
 ```
 
-### Fix Dependency Issues
+## Fix Dependency Issues
 
 The Java EE APIs are no longer contained on the default class path in Java SE 9.
 Some APIs like JAXB, Java Activation must be added as dependencies. Java 9
@@ -117,80 +110,5 @@ Add the following dependencies to Maven to resolve
 </dependency>
 ```
 
-## jps
-
-`jps` - Java Virtual Machine Process Status Tool.
-
-### Synopsis
-
-    jps [ options ] [ hostid ]
-
-### Examples
-
-Before talking to examples, let's create a small Java program:
-
-```java
-import java.util.Scanner;
-
-public class App {
-  public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Please enter your name: ");
-    String name = scanner.next();
-    System.out.println("Welcome, " + name);
-  }
-}
-```
-
-Now, compile and execute the program `App`:
-
-```
-$ javac App.java
-$ java App
-```
-
-Open another terminal and list the instrumented JVMs on the local host:
-
-```
-$ jps
-56113        // IntelliJ IDEA
-56312 Jps    // JVM Process Status Tool
-56047 App    // App for demo
-```
-
-Option `-l` output the full package name for the application's main class or the
-full path name to the application's JAR file:
-
-```
-$ jps -l
-56113                             // IntelliJ IDEA
-56322 jdk.jcmd/sun.tools.jps.Jps  // JPS with full path, also PID changed
-56047 App                         // App for demo
-```
-
-Option `-v` outputs the arguments passed to the JVM:
-
-```
-$ jps -v
-56113  -Xms1g -Xmx4g -XX:ReservedCodeCacheSize=240m -XX:+UseCompressedOops -Djb.vmOptionsFile=/Users/mincong/Library/Preferences/IntelliJIdea2017.3/idea.vmoptions -Xbootclasspath/a:/Applications/IntelliJ IDEA.app/Contents/lib/boot.jar -Didea.java.redist=jdk-bundled -Didea.home.path=/Applications/IntelliJ IDEA.app/Contents -Didea.executable=idea -Didea.paths.selector=IntelliJIdea2017.3
-56047 App
-56398 Jps -Dapplication.home=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home -Xms8m -Djdk.module.main=jdk.jcmd
-```
-
-Option `-m` outputs the arguments passed to the main method. The output may be
-null for embedded JVMs:
-
-```
-$ jps -m
-56113
-56047 App
-56410 Jps -m
-```
-
-## References
-
-- [jps - Java Virtual Machine Process Status Tool][jps]
-
-[jps]: https://docs.oracle.com/javase/7/docs/technotes/tools/share/jps.html
 [MDEP-559]: https://issues.apache.org/jira/browse/MDEP-559
 [jdk9-download]: http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html
