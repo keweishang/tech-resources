@@ -1,5 +1,6 @@
 # Vim Commands
 
+## Navigation
 Command | Description
 :--- | :---
 `:42` | Go to line 42
@@ -7,5 +8,13 @@ Command | Description
 `$` | Move to end of the current line
 <kbd>⌃</kbd> + <kbd>U</kbd> | Move up half of the page
 <kbd>⌃</kbd> + <kbd>D</kbd> | Move down half of the page
+`w` | Cursor one word forward
+`b` | Cursor one word back
+
+
+## Editing
+Command | Description
+:--- | :---
 `ddp` | Swap the current line with the next. Useful for re-organizing commits in e.p. `git rebase -i HEAD~5`
 `ddkkp` | Swap the current line with the previous
+
