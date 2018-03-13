@@ -17,3 +17,26 @@ unit tests execution.
 Run unit tests and integration tests:
 
     mvn clean verify
+
+## Dependency
+
+[Apache Maven Dependency Plugin][maven-dependency-plugin] can be used for
+analyse and manipulate artifacts. Here're some examples.
+
+List dependencies used to console:
+
+    mvn dependency:tree
+
+List dependencies used to a file (single-module):
+
+    mvn dependency:tree -DoutputFile=/path/to/file
+
+List dependencies used to a file (multi-modules):
+
+    mvn dependency:tree -DoutputFile=/path/to/file -DappendOutput=true
+
+## References
+
+- [Apache Maven Dependency Plugin][maven-dependency-plugin]
+
+[maven-dependency-plugin]: https://maven.apache.org/plugins/maven-dependency-plugin/
