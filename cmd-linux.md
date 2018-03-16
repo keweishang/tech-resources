@@ -4,6 +4,15 @@ Here's a collection of Linux useful commands. Without specific notice, these
 examples are [POSIX](https://en.wikipedia.org/wiki/POSIX), thus portable to Mac
 OS.
 
+## Basics
+
+For loop:
+
+```sh
+# Prints each element i in array ['a', 'b', 'c']
+for i in a b c; do echo $i; done
+```
+
 ## File
 
 ### grep
