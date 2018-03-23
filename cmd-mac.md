@@ -12,6 +12,7 @@ https://github.com/robbyrussell/oh-my-zsh
 | CMD + OPT + E   | Search all tabs ( aka Expose tabs ) |
 | CMD + 1         | Switch to tab 1                     |
 | CMD + Enter     | Toggle/Untoggle full screen mode    |
+| CMD + Shift + Enter | Toggle/Untoggle full screen mode for current session |
 | CMD + T         | New tab                             |
 | CMD + W         | Close the current tab               |
 
