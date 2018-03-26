@@ -8,6 +8,6 @@ Cut out selected portions of each line of a file.
 **Example:** cut out the rest of the string after the `=` character
 
 ```sh
-$ echo "?client_id=198427177986-senvks6uulo5opucbli1q3qs6ig00r2a.apps.googleusercontent.com" | cut -f2 -d=
-198427177986-senvks6uulo5opucbli1q3qs6ig00r2a.apps.googleusercontent.com
+$ echo "?id=123" | cut -f2 -d=
+123
 ```
