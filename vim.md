@@ -1,5 +1,11 @@
 # Vim Commands
 
+## Open
+
+Open Vim to a specific line, e.g. line 42:
+
+    vim +42 myFile
+
 ## Navigation
 Command | Description
 :--- | :---
