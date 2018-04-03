@@ -41,6 +41,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | --------------------- | ------------------------------------------------- |
 | opt + shift + up/down | move up/down line                                 |
 | cmd + shift + up/down | move up/down while statement (function)           |
+| cmd + shift + enter   | autocomplete the rest of the line                 |
 | cmd + del             | delete line                                       |
 | cmd + d               | duplicate the current line                        |
 | cmd + /               | comment the selection in multi-lines style        |
