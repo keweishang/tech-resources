@@ -4,6 +4,10 @@ Useful Maven commands.
 
 ## Test
 
+Run unit tests and integration tests:
+
+    mvn clean verify
+
 Skip all tests:
 
     mvn clean install -DskipTests
@@ -14,9 +18,15 @@ unit tests execution.
 
     mvn clean test-compile failsafe:integration-test
 
-Run unit tests and integration tests:
+Skip all the integration-tests and run unit-tests only. Flag
+`failIfNoTests=false` is useful for multi-modules project, since some modules do
+not have any tests:
 
-    mvn clean verify
+    mvn clean install -DfailIfNoTests=false -DskipITs
+
+Skip all the integration-tests and run a single unit-test `<TestName>`:
+
+    mvn clean install -DfailIfNoTests=false -DskipITs -Dtest=<TestName>
 
 ## Dependency
 
