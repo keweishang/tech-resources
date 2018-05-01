@@ -30,3 +30,9 @@ git config --global alias.lg 'log --oneline'
 git config --global alias.last 'log --show-signature -1 HEAD'
 git config --global alias.lg 'log --format="%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,reset)%s%C(auto,red bold)% gD% D"'
 ```
+
+## GPG Signed Commit
+
+Disable GPG signature for a single repository:
+
+    git config commit.gpgsign false
