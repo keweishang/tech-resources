@@ -10,6 +10,10 @@ git config --global core.excludesfile ~/.gitignore_global
 # Using GPG Key
 git config --global commit.gpgsign true
 git config --global user.signingkey <GPGKey>
+
+# Proxy
+git config --global http.proxy <proxy-url>
+git config --global --unset http.proxy
 ```
 
 ## Git Alias
@@ -29,6 +33,17 @@ git config --global alias.lg 'log --oneline'
 # Using GPG Key
 git config --global alias.last 'log --show-signature -1 HEAD'
 git config --global alias.lg 'log --format="%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,reset)%s%C(auto,red bold)% gD% D"'
+
+# Proxy
+git config http.proxy <proxy-url>
+git config --unset http.proxy
+```
+
+## Initialization
+
+```sh
+git init
+git init --bare
 ```
 
 ## GPG Signed Commit
