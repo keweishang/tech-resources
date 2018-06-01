@@ -54,6 +54,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | cmd + p               | show constructor/method parameter                 |
 | cmd + opt + t         | surround statement by if/else, try/catch, etc     |
 | ctrl + space(twice)   | import static member                              |
+| ctrl + shift + p      | type info - what type a function call returns     |
 
 # Refactoring
 | Shortcut        | Comment  |
