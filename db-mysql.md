@@ -62,6 +62,48 @@ mysql> SHOW GRANTS FOR 'sonarqube'@'localhost';
 2 rows in set (0.00 sec)
 ```
 
+## Java Connection
+
+Use the following code to check the database connection in Java. You also need
+the MySQL Java connector
+([Connector/J](https://dev.mysql.com/downloads/connector/j/)):
+
+```java
+import java.sql.*;
+
+public class DbCheck {
+  public static void main(String[] args) throws Exception {
+    String user = "<username>";
+    String pass = "<password>";
+    String db = "<database>";
+
+    String url = "jdbc:mysql://localhost:3306/" + db;
+    url += "?serverTimezone=CET";
+    url += "&verifyServerCertificate=false";
+    System.out.println("Connecting...");
+    try (Connection conn = DriverManager.getConnection(url, user, pass)) {
+      System.out.println("Connected to dababase " + db);
+      System.out.println("URL=\"" + url + "\"");
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+    System.out.println("Finished");
+  }
+}
+```
+
+Copy the program to your desktop. Then, compile and run. You'll see the
+following result if everything works correctly:
+
+```
+Desktop $ javac DbCheck.java
+Desktop $ java -classpath '.:../Downloads/mysql-connector-java-8.0.11.jar' DbCheck
+Connecting...
+Connected to dababase telegram
+URL="jdbc:mysql://localhost:3306/telegram?serverTimezone=CET&useSSL=false"
+Finished
+```
+
 ## Uninstallation
 
 - <https://community.jaspersoft.com/wiki/uninstall-mysql-mac-os-x>
