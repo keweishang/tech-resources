@@ -2,36 +2,21 @@
 
 Useful instructions of MySQL in Mac OS.
 
-## Download
-
-Download the community edition from <https://www.mysql.com/downloads/>.
-
 ## Installation
 
-- Open the downloaded `.dmg` file and follow the instruction.
-- Password will be prompted, save it somewhere.
-- Export the installation path to Bash profile<sup>[1]</sup>:
-
-    ```
-    # MySQL
-    export PATH="/usr/local/mysql/bin:$PATH"
-    ```
-
-- Reload bash profile `source ~/.bash_profile`
-- Start the server: Go to _System Preferences_ > _MySQL_ > _Start MySQL Server_
-- Open your terminal, check MySQL can be accessed:
-  - `mysql -u root -p`, the password will be promted
-  - Enter the password saved previously
-  - Now you should be able to access the MySQL shell:
+Download and install MySQL via Homebrew, also install the MySQL service which
+allows to run MySQL in the backend. Then reset root password (like `NewPass`).
 
 ```
-~ $ mysql -u root -p
-Enter password:
+$ brew install mysql
+$ brew tap homebrew/services
+$ brew services start mysql
+$ mysql -u root
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 26
-Server version: 5.7.20
+Server version: 5.7.22 Homebrew
 
-Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
@@ -39,14 +24,8 @@ owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
-mysql>
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPass';
 ```
-
-- Reset the password:
-
-    ```
-    mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'NewPass';
-    ```
 
 ## Creating and Using Database
 
@@ -83,8 +62,15 @@ mysql> SHOW GRANTS FOR 'sonarqube'@'localhost';
 2 rows in set (0.00 sec)
 ```
 
+## Uninstallation
+
+- <https://community.jaspersoft.com/wiki/uninstall-mysql-mac-os-x>
+- <https://gist.github.com/vitorbritto/0555879fe4414d18569d>
+
 ## Reference
 
 - <sup>[1]</sup> [Stack Overflow: Can't access mysql from command line mac][so1]
+- [Install MySQL on macOS Sierra][2]
 
 [so1]: https://stackoverflow.com/questions/8195418
+[2]: https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e
