@@ -25,4 +25,5 @@ Open Vim to a specific line, e.g. line 42:
 | `ddkkp`       | Swap the current line with the previous                                                              |
 | `u`           | Undo                                                                                                 |
 | `:%s/\t/  /g` | Replace tab by 2 spaces in the current editor.                                                       |
+| `:%s/.$//     | Remove the last character from the current editor.                                                   |
 | `diw`         | (delete inner word). Delete a word when the cursor is on it                                          |
