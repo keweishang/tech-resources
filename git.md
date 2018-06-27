@@ -29,6 +29,7 @@ git config --global alias.wip 'commit -a -m wip'
 git config --global alias.cpick cherry-pick
 git config --global alias.last 'log -1 HEAD'
 git config --global alias.lg 'log --oneline'
+git config --global alias.graph 'log --graph --all --oneline --decorate'
 
 # Using GPG Key
 git config --global alias.last 'log --show-signature -1 HEAD'
