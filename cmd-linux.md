@@ -79,6 +79,19 @@ For example:
 will run `ls -l` every 2 seconds (by default) and display the result on
 terminal. Useful for monitoring file changes during application debug.
 
+### df
+
+    df [OPTION]... [FILE]...
+
+`df` reports file system disk space usage.
+
+For example:
+
+    df -k
+
+will display the file system disk space. Option `-k` is equivalent to
+`--block-size=1K`, which scales sizes by 1KB before printing them.
+
 ## Network
 - `lsof -i :80`
 
