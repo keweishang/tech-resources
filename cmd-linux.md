@@ -92,6 +92,25 @@ For example:
 will display the file system disk space. Option `-k` is equivalent to
 `--block-size=1K`, which scales sizes by 1KB before printing them.
 
+### du
+
+`du` estimates file space usage.
+
+For example:
+
+    du -skh
+
+will estimate the file space usage of the current directory. Option `-s` (long
+option `--summarize`) summarizes the result, it displays only a total for each
+argument. Option `-k` is equivalent to `--block-size=1K`, which scales sizes by
+1KB before printing them. Option `-h` (long option `-human-readable`) print
+sizes in human readable format (e.g., 1K 234M 2G).
+
+    du -skh dir1/ dir2/
+
+will estimate the file space usage of the sub-directories `dir1` and `dir2` of
+the current directory.
+
 ## Network
 - `lsof -i :80`
 
