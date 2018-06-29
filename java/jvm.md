@@ -37,6 +37,8 @@ Trace heap memory wasted by anti-patteern usage such as sparse array, duplicate 
 
 ## Examples
 
+### Preparation
+
 Before talking to examples, let's create a small Java program:
 
 ```java
@@ -58,6 +60,8 @@ Now, compile and execute the program `App`:
 $ javac App.java
 $ java App
 ```
+
+### Understand JPS arguments
 
 Open another terminal and list the instrumented JVMs on the local host:
 
@@ -95,6 +99,24 @@ $ jps -m
 56113
 56047 App
 56410 Jps -m
+```
+
+### List Running Processes
+
+`jps` is a good tool if you want to list the running Java processes.
+
+```
+$ jps
+4817 server.jar
+5038 Jps
+```
+
+Once you know the PID, you can send process signals to do some operations. For
+example, to attempt to kill a process (more examples can be seen in
+[DigitalOcean: How To Use ps, kill, and nice to Manage Processes in Linux][1]):
+
+```
+kill <PID>
 ```
 
 # JConsole
@@ -176,3 +198,4 @@ Inspecting charts of Heap Memory Usage, Threads, Classes, and CPU Usage:
 - [jps - Java Virtual Machine Process Status Tool][jps]
 
 [jps]: https://docs.oracle.com/javase/7/docs/technotes/tools/share/jps.html
+[1]: https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux
