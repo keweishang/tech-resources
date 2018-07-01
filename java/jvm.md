@@ -4,6 +4,7 @@
 - [jps](#jps)
   - [Synopsis](#synopsis)
   - [Examples](#examples)
+- [JStack](#jstack)
 - [JConsole](#jconsole)
   - [JConsole Synopsis](#jconsole-synopsis)
   - [JConsole Examples](#jconsole-examples)
@@ -119,6 +120,32 @@ example, to attempt to kill a process (more examples can be seen in
 kill <PID>
 ```
 
+# JStack
+
+`jstack` prints Java stack traces of Java threads for a given Java process or
+core file or a remote debug server. For each Java frame, the full class name,
+method name, 'bci' (byte code index) and line number, if available, are
+printed. With the `-m` option, jstack prints both Java and native frames of all
+threads along with the 'pc' (program counter). For each native frame, the
+closest native symbol to 'pc', if available, is printed. C++ mangled names are
+not demangled. To demangle C++ names, the output of this command may be piped to
+**c++filt**. If the given process is running on a 64-bit VM, you may need to
+specify the -J-d64 option, e.g.:
+
+    jstack -J-d64 -m pid
+
+## Examples
+
+    jstack 1234 > ~/threadDump.txt
+
+Do a thread dump of a Java process (PID=1234).
+
+    jstack -l 1234 > ~/threadDump.txt
+
+Do a thread dump of a Java process (PID=1234) with long listing option `-l`. It
+prints additional information about locks, e.g. _"Locked ownable synchronizers:
+..."_
+
 # JConsole
 
 Simple tool to inspect local and remote JVM.
@@ -196,6 +223,12 @@ Inspecting charts of Heap Memory Usage, Threads, Classes, and CPU Usage:
 # References
 
 - [jps - Java Virtual Machine Process Status Tool][jps]
+- [jstack - Stack Trace (Java 7)][jstack-java7]
+- [jstack - Stack Trace (Java 8)][jstack-java8]
+- [How to take thread dumps? – 8 options][2]
 
 [jps]: https://docs.oracle.com/javase/7/docs/technotes/tools/share/jps.html
+[jstack-java7]: https://docs.oracle.com/javase/7/docs/technotes/tools/share/jstack.html
+[jstack-java8]: https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jstack.html
 [1]: https://www.digitalocean.com/community/tutorials/how-to-use-ps-kill-and-nice-to-manage-processes-in-linux
+[2]: https://blog.fastthread.io/2016/06/06/how-to-take-thread-dumps-7-options/
