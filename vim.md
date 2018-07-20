@@ -6,6 +6,12 @@ Open Vim to a specific line, e.g. line 42:
 
     vim +42 myFile
 
+## Highlight
+
+| Command                     | Description                           |
+| :-------------------------- | :------------------------------------ |
+| `:set syntax=html`          | Highlight as `HTML`                   |
+
 ## Navigation
 | Command                     | Description                           |
 | :-------------------------- | :------------------------------------ |
