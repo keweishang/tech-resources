@@ -18,6 +18,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | ctrl + opt + h       | call hierarchy                                        |
 | opt + cmd + f7       | find usages in project                                |
 | cmd + shift + f7     | highlight usages in current file                      |
+| ctrl + g             | multi-select next occurrence in current file          |
 | cmd + ctrl + g       | select all occurrences in current file                |
 | cmd + shift + '      | maximise tool window                                  |
 | cmd + shift + f12    | maximise editor window                                |
