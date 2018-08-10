@@ -23,6 +23,10 @@
 * [Pivotal](https://pivotal.io/careers)
 * [Docker](https://www.docker.com/careers)
 * [SonarSource](https://www.sonarsource.com/company/jobs/)
+* [FontApp](https://frontapp.com/jobs)
+* [Bankin'](https://bankin.com/fr/jobs.html)
+* [Zenly](https://zen.ly)
+* [Traveldoo](https://www.traveldoo.com)
 
 ## UK
 
