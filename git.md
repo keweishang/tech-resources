@@ -106,5 +106,12 @@ git add -p
 ## Log
 
 ```sh
-
+# Favorite. --all means show me things that are in my repo but which are not necessarily the ancestors of my current commit. a.k.a all branches; --graph means show a graph.
+git log --oneline --all --graph
 ```
+
+## Rebase or Merge
+- Rebase if:
+    - your company's branching strategy doesn't care about if commits come from a branch
+- Merge if:
+    - your company's branching strategy cares if commits come from a branch
