@@ -52,3 +52,43 @@ git init --bare
 Disable GPG signature for a single repository:
 
     git config commit.gpgsign false
+
+## Reset
+
+```sh
+# Use reset when your changes cannot be seen by other developers (e.p. by convention or because it is local). If it's seen by others, use revert instead.
+# There are 3 types of reset: soft, mixed, hard.
+
+# Soft: reset git commit history to a (previous) commit id, put the diff changes in staging directory
+git reset --soft <commit-id>
+
+# Mixed: reset git commit history to a (previous) commit id, put the diff changes in working directory
+git reset <commit-id>
+
+# Hard: reset git commit history to a (previous) commit id, revert all changes of tracked files to the previous state, leaves untracked files alone
+git reset --hard <commit-id>
+
+```
+
+## Revert
+
+```sh
+# Use revert if other developers have seen your changes, and you want to "revert" your changes. This will create a new commit instead of changing the commit history.
+```
+
+## Clean
+
+```sh
+# Clean untracked files and directories. The option -d and -f means cleaning files and directories respectively
+git clean -df
+
+```
+
+## Cheery Pick
+
+```sh
+
+# Use case 1: make a new commit based off another commit from another branch. Typically used when you committed in the wrong branch and want to move the commit to the correct branch. Use reset --hard and clean to revert the wrong branch to the initial state.
+git cherry-pick <commit-id>
+
+```
