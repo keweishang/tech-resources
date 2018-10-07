@@ -64,6 +64,10 @@ git reset --soft <commit-id>
 
 # Mixed: reset git commit history to a (previous) commit id, put the diff changes in working directory
 git reset <commit-id>
+# git reset without a commit-id will unstage the changes (without losing them)
+git reset
+# Interactively preview and unstage individual changes. It works even within the same file, part of the file could be unstaged, other parts would stay staged.
+git reset -p
 
 # Hard: reset git commit history to a (previous) commit id, revert all changes of tracked files to the previous state, leaves untracked files alone
 git reset --hard <commit-id>
