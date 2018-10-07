@@ -91,8 +91,20 @@ git clean -df
 ## Cheery Pick
 
 ```sh
-
 # Use case 1: make a new commit based off another commit from another branch. Typically used when you committed in the wrong branch and want to move the commit to the correct branch. Use reset --hard and clean to revert the wrong branch to the initial state.
 git cherry-pick <commit-id>
+
+```
+
+## Add
+
+```sh
+# Interactively preview and stage individual changes. It works even within the same file, part of the file could be staged, other parts would not be unstaged.
+git add -p
+```
+
+## Log
+
+```sh
 
 ```
