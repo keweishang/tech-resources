@@ -56,20 +56,25 @@ Disable GPG signature for a single repository:
 ## Reset
 
 ```sh
-# Use reset when your changes cannot be seen by other developers (e.p. by convention or because it is local). If it's seen by others, use revert instead.
+# Use reset when your changes cannot be seen by other developers (e.p. by conv-
+# ention or because it is local). If it's seen by others, use revert instead.
 # There are 3 types of reset: soft, mixed, hard.
 
-# Soft: reset git commit history to a (previous) commit id, put the diff changes in staging directory
+# Soft: reset git commit history to a (previous) commit id, put the diff chang-
+# es in staging directory
 git reset --soft <commit-id>
 
-# Mixed: reset git commit history to a (previous) commit id, put the diff changes in working directory
+# Mixed: reset git commit history to a (previous) commit id, put the diff chan-
+# ges in working directory
 git reset <commit-id>
 # git reset without a commit-id will unstage the changes (without losing them)
 git reset
-# Interactively preview and unstage individual changes. It works even within the same file, part of the file could be unstaged, other parts would stay staged.
+# Interactively preview and unstage individual changes. It works even within t-
+# he same file, part of the file can be unstaged, other parts will stay staged.
 git reset -p
 
-# Hard: reset git commit history to a (previous) commit id, revert all changes of tracked files to the previous state, leaves untracked files alone
+# Hard: reset git commit history to a (previous) commit id, revert all changes
+# of tracked files to the previous state, leaves untracked files alone
 git reset --hard <commit-id>
 
 ```
@@ -77,21 +82,36 @@ git reset --hard <commit-id>
 ## Revert
 
 ```sh
-# Use revert if other developers have seen your changes, and you want to "revert" your changes. This will create a new commit instead of changing the commit history.
+# Use revert if other developers have seen your changes, and you want to "reve-
+# rt" your changes. This will create a new commit instead of changing the comm-
+# it history. The following command will revert the changes in the commit.
+git revert <commit-id>
 ```
 
 ## Clean
 
 ```sh
-# Clean untracked files and directories. The option -d and -f means cleaning files and directories respectively
+# Clean untracked files and directories. The option -d and -f means cleaning f-
+# iles and directories respectively
 git clean -df
 
 ```
 
-## Cheery Pick
+## Cherry Pick
 
 ```sh
-# Use case 1: make a new commit based off another commit from another branch. Typically used when you committed in the wrong branch and want to move the commit to the correct branch. Use reset --hard and clean to revert the wrong branch to the initial state.
+# Use case 1: make a new commit based off another commit from another branch. 
+# Typically used when you committed in the wrong branch and want to move the 
+# commit to the correct branch. Use reset --hard and clean to revert the wrong 
+# branch to the initial state.
+
+# Use case 2: back-port changes to other versions of your software. 
+# For example, you have a bug-fix to do, and it should be addressed to 
+# branch 1.x, 2.x, and master. After fixing it on master, you can cherry-pick 
+# the commit from master to 1.x and 2.x.
+
+# Note: you don't have to specify the branch from which the commit is from.
+# Just the commit id would be enough.
 git cherry-pick <commit-id>
 
 ```
@@ -99,19 +119,24 @@ git cherry-pick <commit-id>
 ## Add
 
 ```sh
-# Interactively preview and stage individual changes. It works even within the same file, part of the file could be staged, other parts would not be unstaged.
+# Interactively preview and stage individual changes. It works even within the 
+# same file, part of the file can be staged, other parts will not be unstaged.
 git add -p
 ```
 
 ## Log
 
 ```sh
-# Favorite. --all means show me things that are in my repo but which are not necessarily the ancestors of my current commit. a.k.a all branches; --graph means show a graph.
-git log --oneline --all --graph
+# Favorite. 
+# --all means show me things that are in my repo but which are not necessarily 
+# the ancestors of my current commit. a.k.a all branches; 
+# --graph means show a graph.
+# --decorate means show extra info about remote branches.
+git log --oneline --decorate --all --graph
 ```
 
 ## Rebase or Merge
 - Rebase if:
-    - your company's branching strategy doesn't care about if commits come from a branch
+    - Company branching strategy doesn't care if commits come from a branch
 - Merge if:
-    - your company's branching strategy cares if commits come from a branch
+    - Company branching strategy cares if commits come from a branch
