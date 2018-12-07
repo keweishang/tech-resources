@@ -139,6 +139,12 @@ Shows the data transfer rate, both for data sent and received, for the past 2 se
 Query the Domain Name System (DNS) to obtain domain name or IP address mapping
 or for any other specific DNS record.
 
+### traceroute
+
+    traceroute <url>
+
+Print the route packets take to network host.
+
 ## Performance
 - `time http www.lemonde.fr`
 
