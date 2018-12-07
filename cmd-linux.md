@@ -112,13 +112,27 @@ will estimate the file space usage of the sub-directories `dir1` and `dir2` of
 the current directory.
 
 ## Network
-- `lsof -i :80`
+
+### lsof
+
+```sh
+lsof -i :80
+```
 
 Show what is using up your current port
 
-- Network I/O: `iftop` or `iftop -i eth0` (on any specific network interface)
+### iftop
+
+Network I/O
+
+```sh
+iftop
+iftop -i eth0  # on any specific network interface
+```
 
 Shows the data transfer rate, both for data sent and received, for the past 2 seconds, 10 seconds, and 40 seconds.
+
+### nslookup
 
     nslookup <url>
 
