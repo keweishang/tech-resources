@@ -30,6 +30,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | cmd + opt + [ or ]   | move caret to code block start/end, a.k.a { and }     |
 | cmd + opt + Left     | Navigate back to previous view location               |
 | cmd + opt + Right    | Navigate forward to next view location                |
+| cmd + shift + p      | See where is the implicity parameter from             |
 
 # Search and Replace
 | Shortcut        | Comment                 |
