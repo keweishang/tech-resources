@@ -45,6 +45,15 @@ List dependencies used to a file (multi-modules):
 
     mvn dependency:tree -DoutputFile=/path/to/file -DappendOutput=true
 
+## Help
+
+[Apache Maven Help Plugin][maven-help-plugin] can be used to get relative
+information about a project or the system.
+
+Show the effective POM:
+
+    mvn help:effective-pom
+
 ## Enforcer
 
 [Apache Maven Enforcer Plugin][maven-enforcer-plugin] enforces the Maven build
@@ -62,6 +71,8 @@ The plugin can be executed as:
 
 - [Apache Maven Dependency Plugin][maven-dependency-plugin]
 - [Apache Maven Enforcer Plugin][maven-enforcer-plugin]
+- [Apache Maven Help Plugin][maven-help-plugin]
 
 [maven-dependency-plugin]: https://maven.apache.org/plugins/maven-dependency-plugin/
 [maven-enforcer-plugin]: https://maven.apache.org/enforcer/maven-enforcer-plugin/
+[maven-help-plugin]: https://maven.apache.org/plugins/maven-help-plugin/
