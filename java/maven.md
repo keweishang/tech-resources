@@ -45,6 +45,12 @@ List dependencies used to a file (multi-modules):
 
     mvn dependency:tree -DoutputFile=/path/to/file -DappendOutput=true
 
+## Debug
+
+Debug Maven build by enabling the debug level log (flag `-X`):
+
+   mvn -X <goal>
+
 ## Help
 
 [Apache Maven Help Plugin][maven-help-plugin] can be used to get relative
