@@ -45,9 +45,20 @@ example:
 
 ## Dependency
 
-List dependencies of the current package:
+List dependencies of the current package without the need of installing a
+dependency. It will generate a dependency tree for the project at the current
+directory and print it to the console. You can also query a specific dependency,
+and set a maximum depth level. Using `-prod` / `-production` will list only the
+production dependencies. Using `-dev` / `-development` will list only the dev
+dependencies.
 
     $ npm list
+    $ npm list -prod
+    $ npm list [dependency]
+    $ npm list --depth=[depth]
+
+Actually, `npm-list` is an alias of `npm-ls`. See more information here:
+<https://docs.npmjs.com/cli/ls>.
 
 ## Upgrade to Node 10
 
@@ -71,5 +82,6 @@ Check everything works fine:
 ## References
 
 - [npm documentation - npmrc](https://docs.npmjs.com/files/npmrc)
+- [npm documentation - npm-ls](https://docs.npmjs.com/cli/ls)
 - [Stack Overflow - How to view dependency tree of a given npm
   module?](https://stackoverflow.com/questions/25997519/)
