@@ -25,6 +25,12 @@ Install a package in a global scope:
     $ npm install -g <package>
     $ npm install --global <package>
 
+## Dependency
+
+List dependencies of the current package:
+
+    $ npm list
+
 ## Upgrade to Node 10
 
 Install the specified version of Node (Node 10):
