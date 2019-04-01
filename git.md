@@ -133,6 +133,9 @@ git add -p
 # --graph means show a graph.
 # --decorate means show extra info about remote branches.
 git log --oneline --decorate --all --graph
+
+# Show the changes of a file, work even if the file was deleted.
+git log --full-history -- myfile
 ```
 
 ## Rebase or Merge
