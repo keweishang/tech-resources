@@ -33,3 +33,4 @@ Open Vim to a specific line, e.g. line 42:
 | `:%s/\t/  /g` | Replace tab by 2 spaces in the current editor.                                                       |
 | `:%s/.$//     | Remove the last character from the current editor.                                                   |
 | `diw`         | (delete inner word). Delete a word when the cursor is on it                                          |
+| `:%w !pbcopy` | On Mac: copy the whole file                                          |
