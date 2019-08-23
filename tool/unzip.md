@@ -21,10 +21,13 @@ $ unzip -l my.zip
 ## Show Content of Target Path inside ZIP
 
 Show content of target path, e.g. `path/to/file` inside the target zip, without
-unziping it.
+unziping it. Option "`-p`" extracts files to pipe (stdout). Nothing but the file
+data is sent to stdout, and the files are always extracted in binary format,
+just as they are stored (no conversions). `path/to/file` does not contain
+leading slash "`/`".
 
 ```
-$ unzip -l my.zip path/to/file
+$ unzip -p my.zip path/to/file
 ```
 
 ## References
