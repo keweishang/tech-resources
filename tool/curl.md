@@ -61,3 +61,23 @@ x-xss-protection: 0
 x-frame-options: SAMEORIGIN
 alt-svc: quic=":443"; ma=2592000; v="46,43,39"
 ```
+
+## Encode Query Parameter
+
+Encode query parameter via option `--data-urlencode`:
+
+```
+$ curl -G https://example.com/search --data-urlencode "query=SELECT * FROM table"
+```
+
+This is useful when parameter is too long, and you want to delegate the URL
+encoding to curl. For GET request, `-G` or `--get` is necessary, which will make
+all data specified with `-d`, `--data`, `--data-binary`, or `--data-urlencode`
+to be used in an HTTP request instead of the POST request. The data will be
+appended to the URL with a '?' separator.
+
+
+## References
+
+- damphat, "Any way to encode the url in curl command?", _Stack Exchange_, 2013.
+  <https://unix.stackexchange.com/a/86737/220624>
