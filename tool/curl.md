@@ -76,8 +76,27 @@ all data specified with `-d`, `--data`, `--data-binary`, or `--data-urlencode`
 to be used in an HTTP request instead of the POST request. The data will be
 appended to the URL with a '?' separator.
 
+## Capture Output
+
+Use option `-o, --output <file>` to write HTTP response body to file instead of
+stdout.
+
+For a single file, you can use `-O` instead of `-o <file>` to use the
+last segment of the URL path as the filename. The file will be save inthe
+current working directory. If you want the file saved in a different directory,
+make sure you change the current working directory before invoking curl with
+this option.
+
+```
+$ curl https://mincong-h.github.io/feed.xml -o feed.xml
+$ curl https://mincong-h.github.io/feed.xml -O
+```
 
 ## References
 
 - damphat, "Any way to encode the url in curl command?", _Stack Exchange_, 2013.
   <https://unix.stackexchange.com/a/86737/220624>
+- Greg Bray, "How to capture Curl output to a file?", _Stack Overflow_, 2017.
+  <https://stackoverflow.com/a/47344751/4381330>
+- Alex2php, "How to capture Curl output to a file?", _Stack Overflow_, 2012.
+  <https://stackoverflow.com/a/13735150/4381330>
