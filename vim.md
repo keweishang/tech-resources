@@ -44,3 +44,4 @@ Open Vim to a specific line, e.g. line 42:
 | `ciw`                   | Delete the current word where the cursor is positioned and then drops us into Insert mode            |
 | `.`                     | Repeat action                                                                                        |
 | `u`                     | Undo                                                                                                 |
+| `o`                     | Start a new line, move the cursor to the new line, then enters Insert mode                           |
