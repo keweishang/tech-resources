@@ -115,10 +115,23 @@ login foo
 password bar
 ```
 
+## Status Code
+
+Get only the HTTP status code by: suppressing the progress via silent mode
+(`-s`), writing the output to nowhere (`/dev/null`) instead of stdout, and
+defining the write out (`-w`) format to display on stdout as the numerical
+HTTP code (`%{http_code}`) after a completed and successful operation.
+
+```
+curl -s -o /dev/null -w "%{http_code}" https://example.com
+```
+
 ## References
 
 - damphat, "Any way to encode the url in curl command?", _Stack Exchange_, 2013.
   <https://unix.stackexchange.com/a/86737/220624>
+- pvandenberk, "Getting curl to output HTTP status code?", _Stack Exchange_, 2011.
+  <https://superuser.com/a/442395/519198>
 - Greg Bray, "How to capture Curl output to a file?", _Stack Overflow_, 2017.
   <https://stackoverflow.com/a/47344751/4381330>
 - Alex2php, "How to capture Curl output to a file?", _Stack Overflow_, 2012.
