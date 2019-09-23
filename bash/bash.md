@@ -41,6 +41,31 @@ if [[ ! "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
 if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
 ```
 
+## Array
+
+### Create Array
+
+```sh
+fruits=(
+  apple
+  banana
+  coconut
+)
+```
+
+```
+fruits=(apple banana coconut)
+```
+
+### Iterate Array
+
+```sh
+for f in "${fruits[@]}"
+do
+    # do something
+done
+```
+
 ## String Manipulation
 
 ### Substring Removal
