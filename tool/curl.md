@@ -92,6 +92,29 @@ $ curl https://mincong-h.github.io/feed.xml -o feed.xml
 $ curl https://mincong-h.github.io/feed.xml -O
 ```
 
+## Credentials
+
+Use option `-u, --user` to sepcify the username. Curl will prompt for a
+password. (You can also provide the password as `-u <user:password>`, but in
+this case, it will be exposed in terminal output)
+
+```
+$ curl -u foo https://example.com
+```
+
+Use option `-n, --netrc` to read the username and password from `~/.netrc` file
+and use them as credentials for the call.
+
+```
+$ curl -n https://example.com
+```
+
+```
+machine example.com
+login foo
+password bar
+```
+
 ## References
 
 - damphat, "Any way to encode the url in curl command?", _Stack Exchange_, 2013.
@@ -100,3 +123,5 @@ $ curl https://mincong-h.github.io/feed.xml -O
   <https://stackoverflow.com/a/47344751/4381330>
 - Alex2php, "How to capture Curl output to a file?", _Stack Overflow_, 2012.
   <https://stackoverflow.com/a/13735150/4381330>
+- Finbarr, "Using cURL with a username and password?", _Stack Overflow_, 2010.
+  <https://stackoverflow.com/a/2594908/4381330>
