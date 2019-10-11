@@ -2,9 +2,17 @@
 
 ## Open
 
-Open Vim to a specific line, e.g. line 42:
+Open file and locate to a specific line, e.g. line 42:
 
-    vim +42 myFile
+    vi +42 myFile
+
+Open Zip file:
+
+    vi app.jar
+
+Open Zip file and locate to a specific zip entry, e.g. log4j.xml in a JAR:
+
+    vi zipfile:/path/to/app.jar::log4j.xml
 
 ## Highlight
 
