@@ -28,6 +28,14 @@ Skip all the integration-tests and run a single unit-test `<TestName>`:
 
     mvn clean install -DfailIfNoTests=false -DskipITs -Dtest=<TestName>
 
+Debug unit test in Surefire:
+
+    mvn -Dmaven.surefire.debug test
+
+Debug integration test in Failsafe:
+
+    mvn -Dmaven.failsafe.debug verify
+
 ## Dependency
 
 [Apache Maven Dependency Plugin][maven-dependency-plugin] can be used for
@@ -75,9 +83,16 @@ The plugin can be executed as:
 
 ## References
 
-- [Apache Maven Dependency Plugin][maven-dependency-plugin]
-- [Apache Maven Enforcer Plugin][maven-enforcer-plugin]
-- [Apache Maven Help Plugin][maven-help-plugin]
+- Maven, "Apache Maven Dependency Plugin", _Apache Maven_, 2018.
+  <https://maven.apache.org/plugins/maven-dependency-plugin/>
+- Maven, "Apache Maven Enforcer Plugin", _Apache Maven_, 2018.
+  <https://maven.apache.org/enforcer/maven-enforcer-plugin/>
+- Maven, "Apache Maven Help Plugin", _Apache Maven_, 2018.
+  <https://maven.apache.org/plugins/maven-help-plugin/>
+- Maven, "Maven Surefire Plugin - Debugging Tests", _Apache Maven_, 2018.
+  <http://maven.apache.org/surefire/maven-surefire-plugin/examples/debugging.html>
+- Maven, "Maven Failsafe Plugin - Debugging Tests", _Apache Maven_, 2018.
+  <http://maven.apache.org/surefire/maven-failsafe-plugin/examples/debugging.html>
 
 [maven-dependency-plugin]: https://maven.apache.org/plugins/maven-dependency-plugin/
 [maven-enforcer-plugin]: https://maven.apache.org/enforcer/maven-enforcer-plugin/
