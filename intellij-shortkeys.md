@@ -59,6 +59,7 @@ The most useful IntelliJ shortcuts that I use everyday
 | ctrl + space(twice)   | import static member                          |
 | opt + enter           | add static import                             |
 | ctrl + shift + p      | type info - what type a function call returns |
+| cmd + shift + v       | paste from history                            |
 
 # Refactoring
 | Shortcut        | Comment  |
