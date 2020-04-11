@@ -1,6 +1,11 @@
 # intellij-shortcuts
-The most useful IntelliJ shortcuts that I use everyday
+The most useful IntelliJ shortcuts that I use everyday.
 
+Kewei's setting:
+
+- Set `Navigation Bar` to `Off`: `Find Action (cmd + shift + a)` -> `Navigation Bar ...`
+- Set `Tab placement` to `None`: `Find Action` -> `Tab placement ...`
+- Install `Presentation Assistant` plug-in to show the shortcut on the screen everytime you type it
 
 # Navigation
 | Shortcut                     | Comment                                               |
