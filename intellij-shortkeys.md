@@ -14,7 +14,7 @@ Kewei's setting:
 | cmd + o                      | open class                                            |
 | shift + cmd + o              | open file                                             |
 | opt + cmd + o                | open symbol (fields and functions)                    |
-| opt + cmd + b                | go to implementation                                  |
+| opt + cmd + b                | go to implementations of the interface                |
 | opt + space                  | show definition of method/variable in pop-u           |
 | cmd + e                      | recent files                                          |
 | cmd + shift + del            | navigate to last edit location                        |
