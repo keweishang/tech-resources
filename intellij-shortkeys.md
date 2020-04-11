@@ -12,7 +12,8 @@ Kewei's setting:
 | ---------------------------- | ----------------------------------------------------- |
 | cmd + f12                    | show class members : functions, fields, inner classes |
 | cmd + o                      | open class                                            |
-| cmd + shift + o              | open resource                                         |
+| shift + cmd + o              | open file                                             |
+| opt + cmd + o                | open symbol (fields and functions)                    |
 | opt + cmd + b                | go to implementation                                  |
 | opt + space                  | show definition of method/variable in pop-u           |
 | cmd + e                      | recent files                                          |
