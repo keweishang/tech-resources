@@ -6,6 +6,7 @@ Kewei's setting:
 - Set `Navigation Bar` to `Off`: `Find Action (shift + cmd + a)` -> `Navigation Bar ...`
 - Set `Tab placement` to `None`: `Find Action` -> `Tab placement ...`
 - Install `Presentation Assistant` plug-in to show the shortcut on the screen everytime you type it
+- Add additional `Scopes` named `No Test` to optionally exclude test code when searching function usage: `Find Action` -> `Edit Scopes` -> `Add Scope` -> name it `No Test` and include recursively `Library classes` and `Production classes` 
 
 # Navigation
 | Shortcut                     | Comment                                               |
@@ -23,7 +24,7 @@ Kewei's setting:
 | ctrl + h                     | type hierarchy                                        |
 | shift + cmd + h              | method hierarchy                                      |
 | ctrl + opt + h               | call hierarchy: callers of the function.              |
-| opt + cmd + f7               | find usages in project                                |
+| opt + f7                     | find usages with preview (only prod + lib, no test)   |
 | shift + cmd + f7             | highlight usages in current file                      |
 | ctrl + g                     | multi-select next occurrence in current file          |
 | ctrl + cmd + g               | select all occurrences in current file                |
