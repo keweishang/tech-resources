@@ -22,11 +22,12 @@ Kewei's setting:
 | cmd + b                      | go to declaration / go to usages of method            |
 | ctrl + h                     | type hierarchy                                        |
 | shift + cmd + h              | method hierarchy                                      |
-| ctrl + opt + h               | call hierarchy                                        |
+| ctrl + opt + h               | call hierarchy: callers of the function.              |
 | opt + cmd + f7               | find usages in project                                |
 | shift + cmd + f7             | highlight usages in current file                      |
 | ctrl + g                     | multi-select next occurrence in current file          |
 | ctrl + cmd + g               | select all occurrences in current file                |
+| ctrl + opt + up/down         | next variable occurrence                              |
 | shift + cmd + '              | maximise tool window                                  |
 | shift + cmd + f12            | maximise editor window                                |
 | opt + f12                    | open terminal                                         |
