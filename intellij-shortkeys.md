@@ -67,6 +67,7 @@ Kewei's setting:
 | opt + enter           | add static import                             |
 | ctrl + shift + p      | type info - what type a function call returns |
 | shift + cmd + v       | paste from history                            |
+| ctrl + shift + j      | join multiple lines into 1 line               |
 
 # Refactoring
 | Shortcut        | Comment  |
