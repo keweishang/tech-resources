@@ -9,38 +9,39 @@ Kewei's setting:
 - Add additional `Scopes` named `No Test` to optionally exclude test code when searching function usage: `Find Action` -> `Edit Scopes` -> `Add Scope` -> name it `No Test` and include recursively `Library classes` and `Production classes` 
 
 # Navigation
-| Shortcut                     | Comment                                               |
-| ---------------------------- | ----------------------------------------------------- |
-| cmd + f12                    | show class members : functions, fields, inner classes |
-| cmd + o                      | open class                                            |
-| shift + cmd + o              | open file                                             |
-| opt + cmd + o                | open symbol (fields and functions)                    |
-| opt + cmd + b                | go to implementations of the interface                |
-| opt + space                  | show definition of method/variable in pop-u           |
-| cmd + e                      | recent files                                          |
-| shift + cmd + e              | recent files + file content                           |
-| shift + cmd + del            | navigate to last edit location                        |
-| cmd + b                      | go to declaration / go to usages of method            |
-| ctrl + h                     | type hierarchy                                        |
-| shift + cmd + h              | method hierarchy                                      |
-| ctrl + opt + h               | call hierarchy: callers of the function.              |
-| opt + f7                     | find usages with preview (only prod + lib, no test)   |
-| shift + cmd + f7             | highlight usages in current file                      |
-| ctrl + g                     | multi-select next occurrence in current file          |
-| ctrl + cmd + g               | select all occurrences in current file                |
-| ctrl + opt + up/down         | next variable occurrence                              |
-| shift + cmd + '              | maximise tool window                                  |
-| shift + cmd + f12            | maximise editor window                                |
-| opt + f12                    | open terminal                                         |
-| f2                           | next problem                                          |
-| shift + cmd + [ or ]         | go to left / right editor tab                         |
-| cmd + [ or ]                 | undo / redo last navigation operation                 |
-| fn + up or down arrow        | page up / down                                        |
-| opt + cmd + [ or ]           | move caret to code block start/end, a.k.a { and }     |
-| opt + cmd + Left             | Navigate back to previous view location               |
-| opt + cmd + Right            | Navigate forward to next view location                |
-| shift + cmd + p              | See where is the implicity parameter from             |
-| ctrl + opt + shift + "+"/"-" | Show Implicit Hints                                   |
+| Shortcut                                                     | Comment                                               |
+| ------------------------------------------------------------ | ----------------------------------------------------- |
+| cmd + f12                                                    | show class members : functions, fields, inner classes |
+| cmd + o                                                      | open class                                            |
+| shift + cmd + o                                              | open file                                             |
+| opt + cmd + o                                                | open symbol (fields and functions)                    |
+| opt + cmd + b                                                | go to implementations of the interface                |
+| opt + space                                                  | show definition of method/variable in pop-u           |
+| cmd + e                                                      | recent files                                          |
+| shift + cmd + e                                              | recent files + file content                           |
+| shift + cmd + del                                            | navigate to last edit location                        |
+| cmd + b                                                      | go to declaration / go to usages of method            |
+| ctrl + h                                                     | type hierarchy                                        |
+| shift + cmd + h                                              | method hierarchy                                      |
+| ctrl + opt + h                                               | call hierarchy: callers of the function.              |
+| opt + f7                                                     | find usages with preview (only prod + lib, no test)   |
+| shift + cmd + f7                                             | highlight usages in current file                      |
+| ctrl + g                                                     | multi-select next occurrence in current file          |
+| ctrl + cmd + g                                               | select all occurrences in current file                |
+| ctrl + opt + up/down                                         | next variable occurrence                              |
+| shift + cmd + '                                              | maximise tool window                                  |
+| shift + cmd + f12                                            | maximise editor window                                |
+| opt + f12                                                    | open terminal                                         |
+| f2                                                           | next problem                                          |
+| shift + cmd + [ or ]                                         | go to left / right editor tab                         |
+| cmd + [ or ]                                                 | undo / redo last navigation operation                 |
+| fn + up or down arrow                                        | page up / down                                        |
+| opt + cmd + [ or ]                                           | move caret to code block start/end, a.k.a { and }     |
+| opt + cmd + Left                                             | Navigate back to previous view location               |
+| opt + cmd + Right                                            | Navigate forward to next view location                |
+| shift + cmd + p                                              | See where is the implicity parameter from             |
+| ctrl + opt + shift + "+"/"-"                                 | Show Implicit Hints                                   |
+| Press `opt` twice without releasing it, press `up` or `down` | Select multiple lines                                 |
 
 # Search and Replace
 | Shortcut        | Comment                 |
