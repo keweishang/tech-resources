@@ -53,7 +53,7 @@ fruits=(
 )
 ```
 
-```
+```sh
 fruits=(apple banana coconut)
 ```
 
@@ -63,6 +63,43 @@ fruits=(apple banana coconut)
 for f in "${fruits[@]}"
 do
     # do something
+done
+```
+
+## For-Loop
+
+Iterating array:
+
+```sh
+for f in 'apple' 'banana' 'coconut'
+do
+    echo $f
+done
+```
+
+```sh
+fruits=(apple banana coconut)
+for f in "${fruits[@]}"
+do
+    echo $f
+done
+```
+
+Listing PNG files:
+
+```sh
+for f in /path/to/images/*.png
+do
+    echo $f
+done
+```
+
+Three-expression for-loop:
+
+```sh
+for (( i=1; i<=5; i++ ))
+do  
+    echo $i
 done
 ```
 
