@@ -24,6 +24,33 @@ b=$(( $a + 2 ))  # b=3
 a=$(( 1 * 2 ))  # a=2
 ```
 
+## Input Arguments
+
+Capture the first input argument of the bash script:
+
+```sh
+#
+# bash my_script.sh apple banana coconut
+#
+fruit="$1"
+# apple
+```
+
+Iterate over all the input arguments:
+
+```sh
+#
+# bash my_script.sh apple banana coconut
+#
+for fruit in "$@"
+do
+    echo $fruit
+done
+# apple
+# banana
+# coconut
+```
+
 ## Regular Expression
 
 Regular expression in if-statement:
