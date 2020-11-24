@@ -51,9 +51,11 @@ done
 # coconut
 ```
 
-## Regular Expression
+## String Comparison in If-Statement
 
-Regular expression in if-statement:
+### Regular Expression
+
+Normal regular expression:
 
 ```bash
 if [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
@@ -66,6 +68,12 @@ Negate regular expression:
 if [[ ! "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
 # outside
 if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
+```
+
+Contain keyword using `==`, e.g. word "2020":
+
+```sh
+if [[ "$date" == *"2020"* ]]
 ```
 
 ## Array
@@ -199,3 +207,4 @@ Exit Code | Meaning                                                    | Example
 ## References
 
 - <http://tldp.org/LDP/abs/html/exitcodes.html>
+- StackOverflow: [How to check if a string contains a substring in Bash](https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash)
