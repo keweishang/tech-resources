@@ -51,7 +51,7 @@ done
 # coconut
 ```
 
-## String Comparison in If-Statement
+## If-Statement
 
 ### Regular Expression
 
@@ -74,6 +74,44 @@ Contain keyword using `==`, e.g. word "2020":
 
 ```sh
 if [[ "$date" == *"2020"* ]]
+```
+
+### Integer Comparison
+
+Whether integer `a` is equal to interger `b`:
+
+```sh
+if [ "$a" -eq "$b" ]
+```
+
+Whether integer `a` is not equal to interger `b`:
+
+```sh
+if [ "$a" -ne "$b" ]
+```
+
+Whether integer `a` is greater than interger `b`:
+
+```sh
+if [ "$a" -gt "$b" ]
+```
+
+Whether integer `a` is greater than or equal to interger `b`:
+
+```sh
+if [ "$a" -ge "$b" ]
+```
+
+Whether integer `a` is less than interger `b`:
+
+```sh
+if [ "$a" -lt "$b" ]
+```
+
+Whether integer `a` is less than or equal to interger `b`:
+
+```sh
+if [ "$a" -le "$b" ]
 ```
 
 ## Array
