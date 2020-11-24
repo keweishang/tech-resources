@@ -57,6 +57,11 @@ fruits=(
 fruits=(apple banana coconut)
 ```
 
+```sh
+s="apple banana coconut"
+fruits=($s)
+```
+
 ### Iterate Array
 
 ```sh
