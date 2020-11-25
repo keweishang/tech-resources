@@ -24,9 +24,38 @@ b=$(( $a + 2 ))  # b=3
 a=$(( 1 * 2 ))  # a=2
 ```
 
-## Regular Expression
+## Input Arguments
 
-Regular expression in if-statement:
+Capture the first input argument of the bash script:
+
+```sh
+#
+# bash my_script.sh apple banana coconut
+#
+fruit="$1"
+# apple
+```
+
+Iterate over all the input arguments:
+
+```sh
+#
+# bash my_script.sh apple banana coconut
+#
+for fruit in "$@"
+do
+    echo $fruit
+done
+# apple
+# banana
+# coconut
+```
+
+## If-Statement
+
+### Regular Expression
+
+Normal regular expression:
 
 ```bash
 if [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
@@ -39,6 +68,50 @@ Negate regular expression:
 if [[ ! "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
 # outside
 if ! [[ "$date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]
+```
+
+Contain keyword using `==`, e.g. word "2020":
+
+```sh
+if [[ "$date" == *"2020"* ]]
+```
+
+### Integer Comparison
+
+Whether integer `a` is equal to interger `b`:
+
+```sh
+if [ "$a" -eq "$b" ]
+```
+
+Whether integer `a` is not equal to interger `b`:
+
+```sh
+if [ "$a" -ne "$b" ]
+```
+
+Whether integer `a` is greater than interger `b`:
+
+```sh
+if [ "$a" -gt "$b" ]
+```
+
+Whether integer `a` is greater than or equal to interger `b`:
+
+```sh
+if [ "$a" -ge "$b" ]
+```
+
+Whether integer `a` is less than interger `b`:
+
+```sh
+if [ "$a" -lt "$b" ]
+```
+
+Whether integer `a` is less than or equal to interger `b`:
+
+```sh
+if [ "$a" -le "$b" ]
 ```
 
 ## Array
@@ -55,6 +128,11 @@ fruits=(
 
 ```sh
 fruits=(apple banana coconut)
+```
+
+```sh
+s="apple banana coconut"
+fruits=($s)
 ```
 
 ### Iterate Array
@@ -167,3 +245,4 @@ Exit Code | Meaning                                                    | Example
 ## References
 
 - <http://tldp.org/LDP/abs/html/exitcodes.html>
+- StackOverflow: [How to check if a string contains a substring in Bash](https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash)
