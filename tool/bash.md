@@ -144,6 +144,13 @@ do
 done
 ```
 
+### Length
+
+```sh
+echo "${#fruits[@]}"
+# 3
+```
+
 ## For-Loop
 
 Iterating array:
