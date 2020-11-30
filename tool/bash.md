@@ -262,9 +262,9 @@ Exit Code | Meaning                                                    | Example
 Perform command in the background via `&` and then `wait` for the results:
 
 ```sh
-for i in {1..10}
+for f in apple banana coconut damson
 do
-    echo "$i" &
+    (sleep 1 ; echo "$f") &
     # You can also retrieve the process using `$!`:
     #
     #     p=$!
@@ -272,6 +272,49 @@ do
 done
 
 wait
+
+echo "Finished"
+
+# time bash concurrent_bg.sh
+#
+# apple
+# damson
+# banana
+# coconut
+# Finished
+#
+# real	0m1.016s
+# user	0m0.006s
+# sys	0m0.015s
+#
+# We waited 1 second for print 4 fruits because 4 processes were created.
+# In other words, we don't control the parallelism when using background
+# sign: `&`.
+```
+
+Use `xargs` with option `-P` to enable the parallel mode: run at most N
+invocations of utility at once.
+
+```sh
+# script: concurrent_xargs.sh
+fruits="apple banana coconut damson"
+echo "$fruits" | tr ' ' '\n' | xargs -I _ -P 2 bash -c "sleep 1; echo _"
+echo "Finished"
+
+# time bash concurrent_xargs.sh
+#
+# apple
+# banana
+# coconut
+# damson
+# Finished
+#
+# real	0m2.030s
+# user	0m0.010s
+# sys	0m0.025s
+#
+# We waited 2 seconds for printing 4 fruits because 2 processes were created.
+# In other words, we control the parallelism when using xargs.
 ```
 
 ## References
