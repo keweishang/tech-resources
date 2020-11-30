@@ -257,7 +257,26 @@ Exit Code | Meaning                                                    | Example
 `130`     | Script terminated by Control-C                             | Ctl-C                     | Control-C is fatal error signal 2, (130 = 128 + 2, see above)
 `255*`    | Exit status out of range                                   | `exit -1`                 | `exit` takes only integer args in the range 0 - 255
 
+## Concurrency
+
+Perform command in the background via `&` and then `wait` for the results:
+
+```sh
+for i in {1..10}
+do
+    echo "$i" &
+    # You can also retrieve the process using `$!`:
+    #
+    #     p=$!
+    #
+done
+
+wait
+```
+
 ## References
 
 - <http://tldp.org/LDP/abs/html/exitcodes.html>
 - StackOverflow: [How to check if a string contains a substring in Bash](https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash)
+- StackOverflow: [How do you run multiple programs in parallel from a bash
+  script?](https://stackoverflow.com/questions/3004811/how-do-you-run-multiple-programs-in-parallel-from-a-bash-script)
