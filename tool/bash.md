@@ -135,15 +135,6 @@ s="apple banana coconut"
 fruits=($s)
 ```
 
-### Iterate Array
-
-```sh
-for f in "${fruits[@]}"
-do
-    # do something
-done
-```
-
 ### Length
 
 ```sh
@@ -160,6 +151,9 @@ for f in 'apple' 'banana' 'coconut'
 do
     echo $f
 done
+# apple
+# banana
+# coconut
 ```
 
 ```sh
@@ -168,7 +162,21 @@ for f in "${fruits[@]}"
 do
     echo $f
 done
+# apple
+# banana
+# coconut
 ```
+
+```sh
+for i in {1..3}
+do
+    echo $i
+done
+# 1
+# 2
+# 3
+```
+
 
 Listing PNG files:
 
