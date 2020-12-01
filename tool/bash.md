@@ -135,13 +135,11 @@ s="apple banana coconut"
 fruits=($s)
 ```
 
-### Iterate Array
+### Length
 
 ```sh
-for f in "${fruits[@]}"
-do
-    # do something
-done
+echo "${#fruits[@]}"
+# 3
 ```
 
 ## For-Loop
@@ -153,6 +151,9 @@ for f in 'apple' 'banana' 'coconut'
 do
     echo $f
 done
+# apple
+# banana
+# coconut
 ```
 
 ```sh
@@ -161,7 +162,21 @@ for f in "${fruits[@]}"
 do
     echo $f
 done
+# apple
+# banana
+# coconut
 ```
+
+```sh
+for i in {1..3}
+do
+    echo $i
+done
+# 1
+# 2
+# 3
+```
+
 
 Listing PNG files:
 
@@ -242,7 +257,69 @@ Exit Code | Meaning                                                    | Example
 `130`     | Script terminated by Control-C                             | Ctl-C                     | Control-C is fatal error signal 2, (130 = 128 + 2, see above)
 `255*`    | Exit status out of range                                   | `exit -1`                 | `exit` takes only integer args in the range 0 - 255
 
+## Concurrency
+
+Perform command in the background via `&` and then `wait` for the results:
+
+```sh
+for f in apple banana coconut damson
+do
+    (sleep 1 ; echo "$f") &
+    # You can also retrieve the process using `$!`:
+    #
+    #     p=$!
+    #
+done
+
+wait
+
+echo "Finished"
+
+# time bash concurrent_bg.sh
+#
+# apple
+# damson
+# banana
+# coconut
+# Finished
+#
+# real	0m1.016s
+# user	0m0.006s
+# sys	0m0.015s
+#
+# We waited 1 second for print 4 fruits because 4 processes were created.
+# In other words, we don't control the parallelism when using background
+# sign: `&`.
+```
+
+Use `xargs` with option `-P` to enable the parallel mode: run at most N
+invocations of utility at once.
+
+```sh
+# script: concurrent_xargs.sh
+fruits="apple banana coconut damson"
+echo "$fruits" | tr ' ' '\n' | xargs -I _ -P 2 bash -c "sleep 1; echo _"
+echo "Finished"
+
+# time bash concurrent_xargs.sh
+#
+# apple
+# banana
+# coconut
+# damson
+# Finished
+#
+# real	0m2.030s
+# user	0m0.010s
+# sys	0m0.025s
+#
+# We waited 2 seconds for printing 4 fruits because 2 processes were created.
+# In other words, we control the parallelism when using xargs.
+```
+
 ## References
 
 - <http://tldp.org/LDP/abs/html/exitcodes.html>
 - StackOverflow: [How to check if a string contains a substring in Bash](https://stackoverflow.com/questions/229551/how-to-check-if-a-string-contains-a-substring-in-bash)
+- StackOverflow: [How do you run multiple programs in parallel from a bash
+  script?](https://stackoverflow.com/questions/3004811/how-do-you-run-multiple-programs-in-parallel-from-a-bash-script)
