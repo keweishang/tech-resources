@@ -163,7 +163,7 @@ builtin plugin `gitfast` and export the following environment variables in the `
 + export GIT_PS1_SHOWDIRTYSTATE=1
 + export GIT_PS1_SHOWUNTRACKEDFILES=1
 + export GIT_PS1_SHOWSTASHSTATE=1
-+ export GIT_PS1_SHOWUPSTREAM="auto verbose"
++ export GIT_PS1_SHOWUPSTREAM="verbose"
 ```
 
 It shows the new files (`%`), untracked changes (`*`), tracked but uncommited changes (`+`), stashed changes (`$`), upstream branch (`=`):
