@@ -8,6 +8,14 @@ Perform an HTTP request using `curl`:
 kubectl exec my-pod -- curl -s localhost:9200
 ```
 
+## Connect To Pod
+
+Connect to a pod using bash shell:
+
+```sh
+kubectl exec -it my-pod -- bash
+```
+
 ## Multiple Commands
 
 Find the JVM system properties for Elasticsearch using `jcmd` and the process ID:
