@@ -36,6 +36,10 @@ Trace heap memory wasted by anti-patteern usage such as sparse array, duplicate 
 
     jps [ options ] [ hostid ]
 
+## Known Issues
+
+https://bugs.openjdk.java.net/browse/JDK-7091209 jps -v truncates argument to 1024 symbols (closed). Workaround: use `ps` instead of `jps`.
+
 ## Examples
 
 ### Preparation
