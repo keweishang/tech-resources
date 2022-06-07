@@ -7,6 +7,11 @@ git config --global user.name <user-name>
 git config --global user.email <user-email>
 git config --global core.excludesfile ~/.gitignore_global
 
+# To always --prune for `git fetch` and `git pull` in all your Git repositories,
+# useful for cleaning outdated references.
+# https://stackoverflow.com/questions/18308535/automatic-prune-with-git-fetch-or-pull
+git config --global fetch.prune true
+
 # Using GPG Key
 git config --global commit.gpgsign true
 git config --global user.signingkey <GPGKey>
